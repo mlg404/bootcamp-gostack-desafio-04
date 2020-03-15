@@ -1,0 +1,19 @@
+section {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%
+}
+.post {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.133916);
+  border-radius: 4px;
+  /* padding: 20px; */
+  margin-top: 20px;
+  width: 40%;
+}
+
+.post:last-child{
+  margin-bottom: 20px;
+}

@@ -1,0 +1,89 @@
+.post-header {
+  padding: 0 20px;
+  padding-top: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.post-header div{
+  display: flex;
+  flex-flow: row nowrap;
+}
+.post-header div img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.post-header div div {
+  margin-left: 10px;
+  display:block
+}
+.post-header div div strong {
+  display: block;
+  font-size: 14px;
+  color: #4A4A4A;
+}
+
+.post-header div div span {
+  font-size: 11px;
+  color: #9A9A9A;
+}
+.post-header i {
+  font-size: 14px;
+  color: #9A9A9A;
+  cursor: pointer;
+  transition: .5s
+}
+.post-header i:hover {
+  color: #4A4A4A;
+}
+
+.post-body{
+  color: #3E3E3E;
+  font-size: 14px;
+  margin: 12px 0;
+  padding: 0 20px;
+  overflow-wrap: break-word;
+}
+
+.post-line {
+  width: 100%;
+  border: 0.5px solid #EEEEEE;
+  border-radius: 4px;
+}
+
+.post-footer{
+  margin-top: 5px;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 700;
+  color: #5f6770;
+  cursor: pointer;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.post-footer div {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  transition: 1s;
+}
+.post-footer div:hover {
+  color: #4A90E2;
+}
+
+.post-footer div i {
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+.post-margin {
+  margin-top: 5px
+}

@@ -1,0 +1,50 @@
+.comment{
+  padding: 0 20px;
+  padding-top:10px;
+  display: flex;
+  flex-flow: row nowrap;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.comment:first-child{
+  padding-top: 20px
+}
+.comment:last-child{
+  padding-bottom: 20px
+}
+
+.comment img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+.comment div {
+  flex: 1;
+  background: #EEEEEE;
+  border-radius: 20px;
+  margin-left: 10px;
+  padding: 10px 15px;
+  color: #3E3E3E;
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 13px;
+}
+.comment div span {
+  font-weight: 700;
+}
+.comment input {
+  flex: 1;
+  background: #EEEEEE;
+  border-radius: 20px;
+  margin-left: 10px;
+  padding: 10px 15px;
+  color: #3E3E3E;
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 13px;
+  outline: 0;
+  border: 0;
+  box-shadow: 0;
+}
