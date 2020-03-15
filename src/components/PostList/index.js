@@ -6,74 +6,9 @@ import PostCreate from '../PostCreate'
 
 class PostList extends Component {
   state = {
+    newComment: '',
     newPost: '',
     posts: [],
-    postsBackup: [
-      {
-        id: 1,
-        author: {
-          name: "Victor Eyer",
-          avatar: "https://avatars3.githubusercontent.com/u/5060732"
-        },
-        date: "04 Jun 2019",
-        content: "Pessoal, alguém sabe se a Rocketseat está contratando?",
-        likes: [
-          {
-            id: 1,
-            author: {
-              name: "Victor Eyer",
-              avatar: "https://avatars3.githubusercontent.com/u/5060732"
-            },
-            type: "like"
-          }
-        ],
-        comments: [
-          {
-            id: 1,
-            author: {
-              name: "Victor Eyer",
-              avatar: "https://avatars3.githubusercontent.com/u/5060732"
-            },
-            content: "UP"
-          },
-          {
-            id: 2,
-            author: {
-              name: "Victor Eyer",
-              avatar: "https://avatars3.githubusercontent.com/u/5060732"
-            },
-            content: "Eu amo batata frita, é super incrivel porque é batata e é frita!"
-          },
-        ]
-      },
-      {
-        id: 2,
-        author: {
-          name: "Victor Eyer",
-          avatar: "https://avatars3.githubusercontent.com/u/5060732"
-        },
-        date: "04 Jun 2019",
-        content: "Pessoal, alguém sabe se a Rocketseat está contratando?",
-        comments: [
-          {
-            id: 3,
-            author: {
-              name: "Victor Eyer",
-              avatar: "https://avatars3.githubusercontent.com/u/5060732"
-            },
-            content: "UP"
-          },
-          {
-            id: 4,
-            author: {
-              name: "Victor Eyer",
-              avatar: "https://avatars3.githubusercontent.com/u/5060732"
-            },
-            content: "Eu amo batata frita, é super incrivel porque é batata e é frita!"
-          },
-        ]
-      },
-    ]
   };
 
   componentDidMount() {
@@ -99,7 +34,7 @@ class PostList extends Component {
           name: "Victor Eyer",
           avatar: "https://avatars3.githubusercontent.com/u/5060732"
         },
-        date: "10 Mar 2020",
+        date: "15 Mar 2020",
         content: e.target.value,
         comments: []
       },
@@ -122,15 +57,19 @@ class PostList extends Component {
     )
   }
 
-
   render() {
     return (
       <section>
         <PostCreate  
           handleChange={(e) => this.handlePostWrite(e)} 
           handlePost={(e) => this.handlePost(e)}
-          defaultValue ={this.state.newPost.content}/>
-        { this.state.posts.map(post => (<Post key={post.id} post={post}/>))}
+          defaultValue={this.state.newPost.content}
+        />
+        { this.state.posts.reverse().map(post => (
+          <Post 
+            key={post.id} 
+            post={post}
+          />))}
       </section>
     );
   }
